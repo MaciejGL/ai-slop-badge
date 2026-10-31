@@ -37,6 +37,10 @@ Grades are heuristics, not proof. "A" means no AI signs were found, not that a h
 
 Blocklist data by AiSList (https://github.com/Override92/AiSList), a community project with its own licence. It is not bundled with the extension.
 
+Source code: https://github.com/MaciejGL/ai-slop-badge
+
+If you find it useful, you can support development: https://buymeacoffee.com/amitracked
+
 ## Category
 
 Productivity is a reasonable fit. Social & Communication is an alternative.

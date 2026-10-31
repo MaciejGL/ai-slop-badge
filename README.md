@@ -105,6 +105,10 @@ The AiSList blocklist is downloaded from `raw.githubusercontent.com`, which allo
 - The privacy policy is `PRIVACY.md`. Publish it at a public URL (for example on GitHub) and enter that URL in the dashboard.
 - The extension contains no remote code. It only downloads data (XML, JSON and HTML) and parses it as text.
 
+## Support
+
+The extension is free, with no features behind a paywall. If you find it useful, you can support development at https://buymeacoffee.com/amitracked. It's entirely optional.
+
 ## License
 
 The extension's code is under the MIT License (see `LICENSE`).
