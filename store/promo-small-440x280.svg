@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="280" viewBox="0 0 440 280">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1b1b"/>
+      <stop offset="1" stop-color="#303030"/>
+    </linearGradient>
+    <linearGradient id="thumb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a6b7d"/>
+      <stop offset="1" stop-color="#2f3a46"/>
+    </linearGradient>
+  </defs>
+  <rect width="440" height="280" fill="url(#bg)"/>
+  <!-- A thumbnail with the badge in its corner -->
+  <rect x="28" y="70" width="176" height="99" rx="12" fill="url(#thumb)"/>
+  <polygon points="104,103 104,137 133,120" fill="#ffffff" opacity="0.85"/>
+  <rect x="28" y="181" width="150" height="10" rx="5" fill="#4a4a4a"/>
+  <rect x="28" y="199" width="104" height="10" rx="5" fill="#3a3a3a"/>
+  <g transform="translate(58 100)">
+    <circle r="24" fill="#c62828" stroke="#ffffff" stroke-width="3"/>
+    <text y="-6" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#ffffff" opacity="0.9">AI</text>
+    <text y="12" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">E</text>
+  </g>
+  <!-- Title -->
+  <text x="228" y="104" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="29" font-weight="700" fill="#ffffff">AI Slop Badge</text>
+  <text x="229" y="130" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#bdbdbd">for YouTube</text>
+  <!-- Grade scale -->
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <circle cx="242" cy="170" r="13" fill="#2e7d32"/><text x="242" y="175" fill="#ffffff">A</text>
+    <circle cx="276" cy="170" r="13" fill="#689f38"/><text x="276" y="175" fill="#ffffff">B</text>
+    <circle cx="310" cy="170" r="13" fill="#f9a825"/><text x="310" y="175" fill="#1f1f1f">C</text>
+    <circle cx="344" cy="170" r="13" fill="#ef6c00"/><text x="344" y="175" fill="#ffffff">D</text>
+    <circle cx="378" cy="170" r="13" fill="#c62828"/><text x="378" y="175" fill="#ffffff">E</text>
+  </g>
+  <text x="229" y="207" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#bdbdbd">Spot AI-generated channels</text>
+  <text x="229" y="225" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#bdbdbd">right on the thumbnail</text>
+</svg>

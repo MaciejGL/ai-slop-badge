@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AI Slop Badge for YouTube</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <header class="row">
+      <img src="../icons/icon32.png" alt="" width="20" height="20" />
+      <h1>AI Slop Badge</h1>
+      <label class="switch" title="Enable badges">
+        <input type="checkbox" id="enabled" />
+        <span aria-hidden="true"></span>
+        <span class="visually-hidden">Enable badges</span>
+      </label>
+    </header>
+
+    <section class="options">
+      <label class="row option">
+        <span>Use AiSList community blocklist</span>
+        <span class="switch">
+          <input type="checkbox" id="useBlocklist" />
+          <span aria-hidden="true"></span>
+        </span>
+      </label>
+      <p class="hint" id="blocklistStatus"></p>
+      <label class="row option">
+        <span>Check suspected channels for YouTube's AI label</span>
+        <span class="switch">
+          <input type="checkbox" id="labelCheck" />
+          <span aria-hidden="true"></span>
+        </span>
+      </label>
+    </section>
+
+    <section>
+      <h2>Grades</h2>
+      <ul id="legend" class="legend"></ul>
+    </section>
+
+    <section>
+      <h2>Your overrides</h2>
+      <ul id="overrides" class="overrides"></ul>
+      <p class="hint" id="noOverrides">None yet. Click a badge to set one.</p>
+    </section>
+
+    <footer>
+      <div class="row">
+        <button type="button" id="clearCache">Clear cache</button>
+        <span class="hint" id="cacheStatus" role="status"></span>
+      </div>
+      <p class="hint">Grades are heuristics, not proof. A means no AI signs were found.</p>
+      <p class="hint">
+        Blocklist by
+        <a href="https://github.com/Override92/AiSList" target="_blank" rel="noopener">AiSList</a>
+        (community-maintained).
+      </p>
+    </footer>
+  </body>
+</html>

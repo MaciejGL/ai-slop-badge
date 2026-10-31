@@ -1,0 +1,173 @@
+/* Badge on thumbnails and its details popover. YouTube sets [dark] on <html> in dark theme. */
+
+.ytaib-host {
+  position: relative;
+}
+
+.ytaib-badge {
+  --ytaib-bg: #2e7d32;
+  --ytaib-fg: #fff;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 3;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: var(--ytaib-bg);
+  color: var(--ytaib-fg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", "Arial", system-ui, sans-serif;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.ytaib-badge:focus-visible {
+  outline: 2px solid #3ea6ff;
+  outline-offset: 2px;
+}
+
+.ytaib-badge__ai {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  opacity: 0.85;
+}
+
+.ytaib-badge__grade {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.ytaib-badge[data-grade="A"] { --ytaib-bg: #2e7d32; }
+.ytaib-badge[data-grade="B"] { --ytaib-bg: #689f38; }
+.ytaib-badge[data-grade="C"] { --ytaib-bg: #f9a825; --ytaib-fg: #1f1f1f; }
+.ytaib-badge[data-grade="D"] { --ytaib-bg: #ef6c00; }
+.ytaib-badge[data-grade="E"] { --ytaib-bg: #c62828; }
+
+.ytaib-badge[data-grade="pending"] {
+  --ytaib-bg: rgba(0, 0, 0, 0.35);
+  --ytaib-fg: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+}
+
+.ytaib-popover {
+  position: fixed;
+  z-index: 2300;
+  box-sizing: border-box;
+  width: 280px;
+  max-width: calc(100vw - 16px);
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fff;
+  color: #0f0f0f;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto", "Arial", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+html[dark] .ytaib-popover {
+  background: #282828;
+  color: #f1f1f1;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
+}
+
+.ytaib-popover__title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  overflow-wrap: anywhere;
+}
+
+.ytaib-popover__grade {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.ytaib-popover__grade::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #909090;
+  vertical-align: -1px;
+}
+
+.ytaib-popover__grade[data-grade="A"]::before { background: #2e7d32; }
+.ytaib-popover__grade[data-grade="B"]::before { background: #689f38; }
+.ytaib-popover__grade[data-grade="C"]::before { background: #f9a825; }
+.ytaib-popover__grade[data-grade="D"]::before { background: #ef6c00; }
+.ytaib-popover__grade[data-grade="E"]::before { background: #c62828; }
+
+.ytaib-popover__link {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #065fd4;
+}
+
+html[dark] .ytaib-popover__link {
+  color: #3ea6ff;
+}
+
+.ytaib-popover__reasons {
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+
+.ytaib-popover__note {
+  font-size: 12px;
+  color: #606060;
+  margin-bottom: 10px;
+}
+
+html[dark] .ytaib-popover__note {
+  color: #aaa;
+}
+
+.ytaib-popover__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ytaib-popover__button {
+  font: inherit;
+  font-weight: 500;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.05);
+  color: inherit;
+  cursor: pointer;
+}
+
+.ytaib-popover__button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+html[dark] .ytaib-popover__button {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+html[dark] .ytaib-popover__button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ytaib-popover__button:focus-visible {
+  outline: 2px solid #3ea6ff;
+  outline-offset: 1px;
+}
